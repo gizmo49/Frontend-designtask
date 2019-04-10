@@ -223,7 +223,7 @@ ul.nav.nav-tabs{
 input.form-control{
     background: #F6FCFF;
     border: 1px solid #DFF7FF;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     border-radius: 5px;
     font-size: 12px;
     line-height: normal;
