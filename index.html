@@ -11,9 +11,12 @@
         <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
             integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
         <!-- Our Custom CSS -->
         <link rel="stylesheet" href="./css/main.css">
-    
+        
 
     </head>
 
@@ -33,7 +36,7 @@
                     <li>
                         <a href="#">
                             <span class="ico request"></span>
-                           Request
+                           Request <span class="count">3</span>
                         </a>
                     </li>
                     <li>
@@ -66,6 +69,11 @@
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
+                            <button type="button" id="sidebarCollapse" class="btn collapseSide">
+                                <i class="fas fa-align-justify"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link active" data-toggle="tab" href="#home">Account Details</a>
                         </li>
                         <li class="nav-item">
@@ -77,7 +85,7 @@
                     </ul>
 
                     <!-- Tab panes -->
-                    <div class="tab-content">
+                    <div id="tabs" class="tab-content">
                         <div id="home" class="container-fluid tab-pane mt-4 px-5 active">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -155,6 +163,7 @@
                     $('#sidebar, #content').toggleClass('active');
                     $('.collapse.in').toggleClass('in');
                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                    $("#tabs").toggleClass("hideme");
                 });
             });
         </script>
