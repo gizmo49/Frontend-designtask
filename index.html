@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Frontend Design</title>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+            integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="./css/main.css">
+    
+
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <img src="./img/logo.svg" alt="Countless-Smiles">
+                </div>
+
+                <div class="pro-int">
+                    <img src="./img/man.png" alt=""> <span>Shola Akinlade</span>
+                </div>
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#">
+                            <span class="ico request"></span>
+                           Request
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="ico user"></span>
+                           Beneficiaries
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <span class="ico bolt"></span>
+                           Settings
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- <div class="bottom-level"> -->
+                    <a href="#" class="sign-out">
+                        <img src="./img/out.svg" alt=""> Sign out 
+                    </a>
+                <!-- </div> -->
+
+            </nav>
+
+            <!-- Page Content  -->
+            <div id="content">
+
+                <div class="">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#home">Account Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#home">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#home">Expense Categories</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div id="home" class="container-fluid tab-pane mt-4 px-5 active">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="bb-box">
+                                        <div class="box-head">
+                                            <h3>Account Information</h3>
+                                        </div>
+                                        <div class="bry">
+                                            <h6>General</h6>
+                                            <div class="ground">
+                                                <div class="form-row">
+                                                    <div class="col-6">
+                                                        <input type="text" class="form-control" placeholder="First Name">
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <input type="text" class="form-control" placeholder="Last Name">
+                                                    </div>
+                                                </div>
+
+                                                <input type="email" class="form-control" placeholder="Email Address">
+
+                                                <input type="text" class="form-control" placeholder="Phone Number">
+                                            </div>
+
+                                            <h6>Password</h6>
+
+                                            <div class="form-row">
+                                                <div class="col-6">
+                                                    <input type="password" class="form-control" placeholder="New Password">
+                                                </div>
+                                                <div class="col-6">
+                                                    <input type="password" class="form-control" placeholder="Re-enter New Password">
+                                                </div>
+                                            </div>
+
+                                            <button class="btn save">Save Changes</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="bb-box">
+                                        <div class="box-head">
+                                            <h3>Profile Photo</h3>
+                                        </div>
+                                        <div class="pp-box">
+                                            <div class="my-pic">
+                                                <span>SA</span>
+                                            </div>
+                                            <p class="inst">Upload Instructions</p>
+                                            <p class="real">Must be at least 128px by 128px and smaller than 512KB. Image will be <br> displayed on Paystack in the same scale as above.</p>
+                                            <button class="btn save">Upload Photo</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+            integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+            crossorigin="anonymous"></script>
+ 
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
+    </body>
+
+</html>
